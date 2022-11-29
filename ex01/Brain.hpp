@@ -6,6 +6,10 @@
 
 class Brain{
 	public:
+		Brain();
+		~Brain();
+		Brain &operator=(Brain& a);
+		Brain(Brain& a);
 	private:
 		std::string ideas[100];
 };

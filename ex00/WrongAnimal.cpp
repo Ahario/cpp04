@@ -30,3 +30,13 @@ std::string WrongAnimal::getType() const
 	return (this->type);
 }
 
+WrongAnimal &WrongAnimal::operator=(WrongAnimal& a)
+{
+	this->type = a.type;
+	return (*this);
+}
+
+WrongAnimal::WrongAnimal(WrongAnimal& a)
+{
+	*this = a;
+}
