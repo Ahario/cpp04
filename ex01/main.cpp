@@ -7,7 +7,7 @@
 int main()
 {
 	int	i;
-	const Animal **zoo;
+	const Animal *zoo[10];
 	for(i = 0; i < 5; i++)
 	{
 		zoo[i] = new Dog();

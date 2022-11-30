@@ -7,8 +7,8 @@ class Cat : public Animal{
 	public:
 		Cat(void);
 		~Cat(void);
-		Cat(Cat& a);
-		Cat &operator=(Cat& a);
+		Cat(const Cat& a);
+		Cat &operator=(const Cat& a);
 		void makeSound(void) const;
 };
 

@@ -8,12 +8,22 @@ Cat::Cat() : Animal("CAT")
 
 Cat::~Cat()
 {
+	delete this->brain;
 	std::cout << "Kitty out..." << std::endl;
-	delete brain;
 }
 
+Cat::Cat(const Cat& a)
+{
+	*this = a;
+}
 
 void Cat::makeSound() const
 {
 	std::cout << "Meow Meow Meow Meow Meow" << std::endl;
+}
+
+Cat &Cat::operator=(const Cat& a)
+{
+	this->type = a.type;
+	return (*this);
 }

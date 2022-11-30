@@ -15,13 +15,13 @@ void Dog::makeSound() const
 	std::cout << "Woof Woof Woof Woof Woof" << std::endl;
 }
 
-Dog::Dog(Dog& a)
+Dog::Dog(const Dog& a)
 {
 	*this = a;
 }
 
-Dog &Dog::operator=(Dog& a)
+Dog &Dog::operator=(const Dog& a)
 {
-	this->type = type;
+	this->type = a.type;
 	return (*this);
 }

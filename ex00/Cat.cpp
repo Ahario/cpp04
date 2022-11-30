@@ -10,7 +10,7 @@ Cat::~Cat()
 	std::cout << "Kitty out..." << std::endl;
 }
 
-Cat::Cat(Cat& a)
+Cat::Cat(const Cat& a)
 {
 	*this = a;
 }
@@ -20,8 +20,8 @@ void Cat::makeSound() const
 	std::cout << "Meow Meow Meow Meow Meow" << std::endl;
 }
 
-Cat &Cat::operator=(Cat& a)
+Cat &Cat::operator=(const Cat& a)
 {
-	this->type = type;
+	this->type = a.type;
 	return (*this);
 }

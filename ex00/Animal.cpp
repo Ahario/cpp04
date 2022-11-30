@@ -10,17 +10,17 @@ Animal::~Animal()
 	std::cout << "Bye Bye Animal..." << std::endl;
 }
 
-Animal::Animal(std::string name)
+Animal::Animal(const std::string name)
 {
 	type = name;
 }
 
-void Animal::setAnimalType(std::string name)
+void Animal::setAnimalType(const std::string name)
 {
 	this->type = name;
 }
 
-Animal::Animal(Animal& a)
+Animal::Animal(const Animal& a)
 {
 	*this = a;
 }
@@ -35,7 +35,7 @@ std::string Animal::getType() const
 	return (this->type);
 }
 
-Animal &Animal::operator=(Animal& a)
+Animal &Animal::operator=(const Animal& a)
 {
 	this->type = a.type;
 	return (*this);

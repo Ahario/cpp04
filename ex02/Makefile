@@ -1,9 +1,11 @@
-SRCS = WrongAnimal.cpp WrongCat.cpp main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp
+SRCS = WrongAnimal.cpp WrongCat.cpp main.cpp Dog.cpp Cat.cpp AAnimal.cpp Brain.cpp
 OBJS = ${SRCS:.cpp=.o}
 CC    = c++
 CFLAGS	= -Wextra -Wall -Werror -std=c++98
 NAME	= a.out
-.cpp.o:		&{CC} &{CFLAGS} -c -o $@ $<
+
+%.o	:	%.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all:  ${NAME}
 

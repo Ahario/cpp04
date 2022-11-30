@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
@@ -7,7 +7,7 @@
 int main()
 {
 	int	i;
-	const Animal **zoo;
+	const AAnimal *zoo[10];
 	for(i = 0; i < 5; i++)
 	{
 		zoo[i] = new Dog();
